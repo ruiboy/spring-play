@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories( entityManagerFactoryRef = "entityManagerFactory2", transactionManagerRef = "transactionManager2")
+@EnableJpaRepositories( entityManagerFactoryRef = "entityManagerFactory2")
 public class Config2
 {
   @Bean
@@ -35,15 +35,6 @@ public class Config2
     return builder
         .dataSource(dataSource2())
         .packages("sbk.db2")
-        //.persistenceUnit("2")
         .build();
-  }
-
-  @Bean
-  public PlatformTransactionManager transactionManager2(
-      @Qualifier("entityManagerFactory2") EntityManagerFactory entityManagerFactory
-  )
-  {
-    return new JpaTransactionManager(entityManagerFactory);
   }
 }

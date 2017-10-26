@@ -13,7 +13,7 @@ public class SuburbService
   @Autowired
   SuburbRepository suburbRepository;
 
-//  @Transactional("transactionManager2")
+  @Transactional
   public Iterable<Suburb> getAll() {
     return suburbRepository.findAll();
   }

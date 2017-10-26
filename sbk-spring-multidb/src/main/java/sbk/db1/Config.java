@@ -39,16 +39,6 @@ public class Config
     return builder
         .dataSource(dataSource())
         .packages("sbk.db1")
-        //.persistenceUnit("1")
         .build();
-  }
-
-  @Bean
-  @Primary
-  public PlatformTransactionManager transactionManager(
-      @Qualifier("entityManagerFactory") EntityManagerFactory entityManagerFactory
-  )
-  {
-    return new JpaTransactionManager(entityManagerFactory);
   }
 }
