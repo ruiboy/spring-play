@@ -1,0 +1,16 @@
+# db1
+spring:
+  datasource:
+    driver-class-name: au.com.rds.db.driver.RdsDriver
+    url: jdbc:rdsoracle:thin:@sailis-db-1d:1521:actilis
+    username: APP_INTERNAL
+    password: Rn42273VuPyt
+
+#db 2
+other:
+  datasource:
+    driver-class-name: au.com.rds.db.driver.RdsDriver
+    url: jdbc:rdsoracle:thin:@sailis-db-1d:1521:zonkey2
+    username: system
+    password: system_shock
+
