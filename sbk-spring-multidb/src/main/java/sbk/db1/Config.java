@@ -39,7 +39,7 @@ public class Config
     return builder
         .dataSource(dataSource())
         .packages("sbk.db1")
-        .persistenceUnit("1")
+        //.persistenceUnit("1")
         .build();
   }
 

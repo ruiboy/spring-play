@@ -13,10 +13,10 @@ import javax.persistence.Table;
 public class Suburb
 {
   @Id
-  @Column
+  @Column(name = "SUBURB_NAME")
   private String suburbName;
 
-  @Column
+  @Column(name = "SALE_STATISTICS_INDICATOR")
   private String saleStatisticsIndicator;
 
   public String getSuburbName()
