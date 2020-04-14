@@ -1,0 +1,10 @@
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/postgres
+    hikari:
+      register-mbeans: true
+      pool-name: sbk
+      connection-timeout: 5000
+      maximum-pool-size: 5
+      minimum-idle: 5
